@@ -1,0 +1,18 @@
+
+----
+SocketServerInvoker  protected void processInvocation(Socket socket)
+----
+
+  |
+ \|/
+
+----
+ServerThread  dorun()  socketWrapper = createServerSocketWrapper(socket, timeout, invoker.getLocator().getParameters())
+----
+
+  |
+ \|/
+
+----
+ClientSocketWrapper  protected void createStreams(Socket socket, Map metadata)
+----
