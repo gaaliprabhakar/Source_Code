@@ -1,0 +1,36 @@
+Prerequisite
+------------
+
+* install java
+* install ant
+
+Get code
+--------
+
+----
+svn checkout http://svn.apache.org/repos/asf/tomcat/tc6.0.x/trunk/
+----
+
+Build code
+----------
+
+----
+cd ${tomcat.source}
+ant download
+ant
+----
+
+NOTE: Running "ant download" command will download libraries required to build Tomcat to the /usr/share/java directory by default. On a typical Linux or MacOX system, an ordinary user will not have access to write to this directory, and, even if you do, it may not be appropriate for you to write there.
+
+Import to eclipse
+-----------------
+
+* Use Windows->Preferences and then Java->Build Path->Classpath Variables to add two new Classpath variables: 
+
+TOMCAT_LIBS_BASE	the base path where the binary dependencies have been downloaded
+
+ANT_HOME	the base path of Ant 1.6.2 or later
+
+* There are two files in the root directory, eclipse.classpath and eclipse.project. Create their copies with new names, .classpath and .project respectively.
+
+* Use File->Import and chose "Existing Projects into Workspace". From there import the root directory where you have checked out tomcat

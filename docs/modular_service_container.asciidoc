@@ -1,0 +1,10 @@
+Modular service container
+-------------------------
+
+* Every deployable entity is a service
+* Deployment coordinated by subsystems
+* Concurrent service startup
+* Parallel dependency resolution
+* Lazy loading of expensive services
+* STAX parser
+* Annotation & reflection indexing
